@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
 
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-dark">
             <div class="container">
                 <span class="navbar-brand fw-bold fs-4">🐍 SNAKE GAME</span>
-                <span class="navba-text" id="navbar-record">Record: 0</span>
+                <span class="navbar-text" id="navbar-record">Record: 0</span>
             </div>
         </nav>
     </header>
@@ -23,7 +23,7 @@
             <div class="col-12 col-md-8 col-lg-6 text-center">
 
                 <div class="titulo-bloco mb-4">
-                    <h1 class="display-3 fw-bold titulo-jogo">COBRA</h1>
+                    <h1 class="display-3 fw-bold titulo-jogo">SNAKE GAME</h1>
                     <P class="lead subtitulo">Use as setas do teclado para guiar a cobra</P>
                 </div>
 
@@ -47,20 +47,45 @@
                 <div class="mb-4">
                     <p class="label-secao mb-2">Dificuldade</p>
                     <div class="btn-group w-100" role="group">
-                        <input type="radio" class="btn-check" name="dificuldede" id="facil" value="200">
+                        <input type="radio" class="btn-check" name="dificuldade" id="facil" value="200">
                         <label class="btn btn-outline-dif" for="facil">Fácil</label>
 
-                        <input type="radio" class="btn-check" name="dificuldede" id="medio" value="200">
+                        <input type="radio" class="btn-check" name="dificuldade" id="medio" value="200">
                         <label class="btn btn-outline-dif" for="medio">Médio</label>
 
-                        <input type="radio" class="btn-check" name="dificuldede" id="dificil" value="200">
+                        <input type="radio" class="btn-check" name="dificuldade" id="dificil" value="200">
                         <label class="btn btn-outline-dif" for="dificil">Difícil</label>
                     </div>
                 </div>
 
                 <a href="jogo.html" class="btn btn-jogar w-100 mb-3">Jogar</a>
+
+                <div class="card card-instrucoes">
+                    <div class="card-body">
+                        <p class="label-card mb-3"> Como jogar</p>
+                        <div class="row g-2 text-start">
+                            <div class="col-6"><div class="instrucao-item">⬅️⬇️➡️⬆️&nbsp; Mover</div></div>
+                            <div class="col-6"><div class="instrucao-item">🍎 &nbsp; +10 Pontos</div></div>
+                            <div class="col-6"><div class="instrucao-item">🚧 &nbsp; Evite as Paredes</div></div>
+                            <div class="col-6"><div class="instrucao-item">🚧 &nbsp; Evite seu Corpo</div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const recorde = localStorage.getItem("cobra_record") || 0;
+        document.getElementById("recorde-display") .textContent = record;
+        document.getElementById("nav-recorde") .textContent = "recorde: " + recorde
+
+        document.getElementById("btn-jogar").addEventListener("click", () => {
+            const dificuldadeSelecionada = document.querySelector('input[name="dificuldade"]:checked').value;
+            localStorage.setItem("cobra_velocidade", dificuldadeSelecionada);
+        })
+    </script>
 </body>
 </html>

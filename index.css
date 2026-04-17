@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap');
+
+:root {
+    --verde: #4ade80;
+    --verde-claro: #86EFAC;
+    --vermelho: #F87171;
+    --texto: #D1FAE5;
+    --esmaecido: #6B7280;
+    --fundo-card: #1A1A2E;
+    --borda: #1F3320;
+    --fundo: #0a0f0a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(ellipse at 20% 20%, rgba(74, 222, 128, 0.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(22, 163, 74, 0.05) 0%, transparent 60%);
+}
+
+/* NAVBAR */
+.nav-bar {
+    background: rgb(10, 15, 10,0.9);
+    border-bottom: 1px solid var(--borda);
+    backdrop-filter: blur(8px);
+
+}
+
+.navbar-brand {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.85rem !important;
+    color: var(--verde) !important;
+    letter-spacing: 1px;
+} 
+
+.navbar-text {
+    font-size: 0.85rem;
+    color: var(--esmaecido);
+}
+
+/* TITULO */
+.titulo-jogo {
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(2rem, 8.5vw, 3.5rem) !important;
+    color: var(--verde);
+    text-shadow: 
+        0 0 20px rgb(74, 222, 128, 0.5),
+        0 0 20px rgba(74, 22, 128, 0.2);
+    line-height: 1.2;
+    letter-spacing: 4px;
+}
+
+.subtitulo{
+    color: var(--esmaecido);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* CARD */
+.card-recorde, .card-instrucoes {
+    background: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    color: var(--texto);
+}
+
+.label-card{
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--esmaecido);
+    margin-bottom: 4px;
+}
+
+.valor-record{
+    font-family: "Press Start 2P", monospace;
+    font-size: 1.8rem;
+    color: var(--verde);
+    line-height: 1;
+}
+
+.icone-trofeu {
+    font-size: 2rem;
+    opacity: 0.8;
+}
