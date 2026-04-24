@@ -2,13 +2,12 @@
 
 :root {
     --verde: #4ade80;
-    --verde-claro: #86EFAC;
-    --vermelho: #F87171;
-    --texto: #D1FAE5;
-    --esmaecido: #6B7280;
-    --fundo-card: #1A1A2E;
-    --borda: #1F3320;
+    --verde-escuro: #16a34a;
     --fundo: #0a0f0a;
+    --fundo-card: #111a11;
+    --borda: #1f3320;
+    --texto: #d1fae5;
+    --esmaecido: #6b7280;
 }
 
 * {
@@ -91,4 +90,66 @@ body {
 .icone-trofeu {
     font-size: 2rem;
     opacity: 0.8;
+}
+
+/* DIFICULDADE */
+
+.label-secao {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--esmaecido);
+}
+
+.btn-outline-dif {
+    background-color: var(--fundo-card);
+    border-color: var(--borda);
+    color: var(--esmaecido);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+.btn-check:checked + .btn-outline-dif {
+    background: var(--verde-escuro);
+    border-color: var(--verde-claro);
+}
+
+.btn-outline-dif:hover {
+    background: #1a2e1a;
+    border-color: var(--verde) !important;
+    color: var(--verde) !important;
+}
+
+.btn-jogar {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.85rem;
+    background: var(--verde);
+    color: #0a0f0a;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s;
+    box-shadow: 0 0 24px rgba(74, 222, 128, 0.3);
+}
+
+.btn-jogar:hover {
+    background: #86efac;
+    color: #0a0f0a;
+    box-shadow: 0 0 40px rgba(74, 222, 128, 0.5);
+    transform: translateY(-2px);
+}
+
+/* INSTRUÇÕES */
+.instrucao-item {
+    background: #0f1a0f;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    color: var(--esmaecido);
 }

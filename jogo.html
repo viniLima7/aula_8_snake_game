@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+    <!-- HUD -->
+     <div class="hud">
+        <a href="index.html" class="btn-menu">Menu</a>
+        <div class="hud-centro">
+            <span class="label-hud">Pontuação</span>
+            <span class="valor-hud" id="pontuacao">0</span>
+        </div>
+        <div class="hud-direita">
+            <span class="label-hud">Recorde</span>
+            <span class="valor-hud" id="recorde">0</span>
+        </div>
+     </div>
+
+    <!--GRID JOGO -->
+    <div class="arena">
+        <div class="grade" id="grade"></div>
+
+    <!-- TELA DE FIM DE JOGO -->
+     <div class="overlay" id="overlay">
+        <div class="overlay-conteudo">
+            <p class="overlay-titulo" id="overlay-titulo">FIM DE JOGO</p>
+            <p class="overlay-pontos" id="overlay-pontos">0 Pontos</p>
+            <p class="overlay-recorde" id="overlay-recorde"></p>
+
+            <button class="btn-reiniciar" onclick="reiniciar()">Jogar novamente</button>
+            <a href="index.html" class="btn-voltar">Voltar ao menu</a>
+        </div>
+     </div>
+    </div>
+    <!-- CONTROLE PARA SMARTPHONE --> 
+     <div class="controles-smartphone">
+        <div class="linha-controle">
+            <button class="btt-direcao" onclick="mudarDirecao('ArrowUp')">▲</button>
+        </div>
+        <div class="linha-controle">
+            <button class="btt-direcao" onclick="mudarDirecao('ArrowLeft')">◀</button> 
+            <button class="btt-direcao" onclick="mudarDirecao('ArrowDown')">▼</button> 
+            <button class="btt-direcao" onclick="mudarDirecao('ArrowRight')">▶</button> 
+        </div>
+     </div>
+
+     <script src="jogo.js"></script>
+</body>
+</html>
