@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap');
 
 :root {
-    --verde: #4ade80;
-    --verde-escuro: #16a34a;
+    --verde: #4ADE80;
+    --verde-escuro: #16A34A;
     --verde-cabeca: #86EFAC;
     --comida: #F87171;
-    --fundo: #0a0f0a;
-    --fundo-grade: #0D120D;
+    --fundo: #0A0F0A;
+    --fundo-grade: #0D140D;
     --borda: #1F3320;
     --texto: #D1FAE5;
-    --esmaecido: #6b7280;
+    --esmaecido: #6B7280;
     --tamanho-celula: 28px;
     --colunas: 20;
 }
@@ -29,7 +29,7 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    user-select: none; 
+    user-select: none;
 }
 
 .hud {
@@ -50,13 +50,12 @@ body {
     border: 1px solid var(--borda);
     border-radius: 6px;
     transition: color 0.2s, border-color 0.2s;
-    word-spacing: nowrap;
+    white-space: nowrap;
 }
 
 .btn-menu:hover {
     color: var(--verde);
     border-color: var(--verde);
-
 }
 
 .hud-centro,
@@ -109,9 +108,10 @@ body {
 .celula.cobra {
     background-color: var(--verde);
     border-radius: 4px;
-    box-sizing: 0 0 6px rgba(74, 222, 128, 0.4);
+    box-shadow: 0 0 6px rgba(74, 222, 128, 0.4);
 }
-.celula.cabeca{
+
+.celula.cabeca {
     background-color: var(--verde-cabeca);
     border-radius: 6px;
     box-shadow: 0 0 12px rgba(134, 239, 172, 0.7);
@@ -126,10 +126,10 @@ body {
 
 @keyframes pulsar {
     from {transform: scale(0.85);}
-    to {transform: scale(0.85);}        
+    to {transform: scale(1.05);}
 }
 
-/* OVERLAY FIM DE JOGO */
+/*OVERLAY FIM DE JOGO*/
 .overlay {
     position: absolute;
     inset: 0;
@@ -141,7 +141,7 @@ body {
     backdrop-filter: blur(4px);
 }
 
-.overlay.visivel{
+.overlay.visivel {
     display: flex;
 }
 
@@ -176,9 +176,10 @@ body {
     font-family: "Press Start 2P", monospace;
     font-size: 0.7rem;
     background: var(--verde);
-    color: #0a0f0a;
+    color: #0A0F0A;
     border: none;
     border-radius: 8px;
+    padding: 14px 14px;
     cursor: pointer;
     letter-spacing: 1px;
     margin-top: 4px;
@@ -190,18 +191,18 @@ body {
     transform: translateY(-2px);
 }
 
-.btn-voltar{
-    font-size: 0.85rem;
+.btn-voltar {
+    font-size: 0.8rem;
     color: var(--esmaecido);
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .btn-voltar:hover {
-    color: var(--verde);   
+    color: var(--verde);
 }
 
-/* CONTROLE SMARPHONE */
+/*CONTROLES SMARTPHONE*/
 .controles-smartphone {
     margin-top: 16px;
     display: flex;
@@ -210,10 +211,15 @@ body {
     gap: 4px;
 }
 
-.btn-direcao{
+.linha-controle {
+    display: flex;
+    gap: 4px;
+}
+
+.btn-direcao {
     width: 52px;
     height: 52px;
-    background: #111a11;
+    background: #111A11;
     border: 1px solid var(--borda);
     border-radius: 8px;
     color: var(--verde);
@@ -223,6 +229,6 @@ body {
 }
 
 .btn-direcao:hover,
-.btn-direcao:active{
-    background: #1a2e1a;
+.btn-direcao:active {
+    background: #1A2E1A;
 }

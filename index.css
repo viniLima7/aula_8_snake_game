@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap');
 
 :root {
-    --verde: #4ade80;
-    --verde-escuro: #16a34a;
-    --fundo: #0a0f0a;
-    --fundo-card: #111a11;
-    --borda: #1f3320;
-    --texto: #d1fae5;
-    --esmaecido: #6b7280;
+    --verde: #4ADE80;
+    --verde-escuro: #16A34A;
+    --fundo: #0A0F0A;
+    --fundo-card: #111A11;
+    --borda: #1F3320;
+    --texto: #D1FAE5;
+    --esmaecido: #6B7280;
 }
 
 * {
@@ -21,17 +21,16 @@ body {
     background-color: var(--fundo);
     color: var(--texto);
     min-height: 100vh;
-    background-image: 
+    background-image:
         radial-gradient(ellipse at 20% 20%, rgba(74, 222, 128, 0.06) 0%, transparent 60%),
         radial-gradient(ellipse at 80% 80%, rgba(22, 163, 74, 0.05) 0%, transparent 60%);
 }
 
-/* NAVBAR */
-.nav-bar {
-    background: rgb(10, 15, 10,0.9);
+/*NAVBAR*/
+.navbar {
+    background:  rgba(10, 15, 10, 0.9);
     border-bottom: 1px solid var(--borda);
     backdrop-filter: blur(8px);
-
 }
 
 .navbar-brand {
@@ -39,40 +38,41 @@ body {
     font-size: 0.85rem !important;
     color: var(--verde) !important;
     letter-spacing: 1px;
-} 
+}
 
 .navbar-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--esmaecido);
 }
 
-/* TITULO */
+/*TÍTULO*/
 .titulo-jogo {
     font-family: "Press Start 2P", monospace;
     font-size: clamp(2rem, 8.5vw, 3.5rem) !important;
     color: var(--verde);
-    text-shadow: 
-        0 0 20px rgb(74, 222, 128, 0.5),
-        0 0 20px rgba(74, 22, 128, 0.2);
+    text-shadow:
+        0 0 20px rgba(74, 222, 128, 0.5),
+        0 0 60px rgba(74, 22, 128, 0.2);
     line-height: 1.2;
     letter-spacing: 4px;
 }
 
-.subtitulo{
+.subtitulo {
     color: var(--esmaecido);
     font-size: 0.9rem;
     line-height: 1.7;
 }
 
-/* CARD */
-.card-recorde, .card-instrucoes {
-    background: var(--fundo);
+/*CARDS*/
+.card-recorde,
+.card-instrucoes {
+    background: var(--fundo-card);
     border: 1px solid var(--borda);
     border-radius: 12px;
     color: var(--texto);
 }
 
-.label-card{
+.label-card {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -80,7 +80,7 @@ body {
     margin-bottom: 4px;
 }
 
-.valor-record{
+.valor-recorde {
     font-family: "Press Start 2P", monospace;
     font-size: 1.8rem;
     color: var(--verde);
@@ -92,8 +92,7 @@ body {
     opacity: 0.8;
 }
 
-/* DIFICULDADE */
-
+/*DIFICULDADE*/
 .label-secao {
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -102,7 +101,7 @@ body {
 }
 
 .btn-outline-dif {
-    background-color: var(--fundo-card);
+    background: var(--fundo-card);
     border-color: var(--borda);
     color: var(--esmaecido);
     font-weight: 600;
@@ -113,20 +112,22 @@ body {
 
 .btn-check:checked + .btn-outline-dif {
     background: var(--verde-escuro);
-    border-color: var(--verde-claro);
+    border-color: var(--verde);
+    color: #FFFFFF;
 }
 
 .btn-outline-dif:hover {
-    background: #1a2e1a;
+    background: #1A2E1A !important;
     border-color: var(--verde) !important;
     color: var(--verde) !important;
 }
 
+/*BOTÃO JOGAR*/
 .btn-jogar {
     font-family: "Press Start 2P", monospace;
     font-size: 0.85rem;
     background: var(--verde);
-    color: #0a0f0a;
+    color: #0A0F0A;
     border: none;
     border-radius: 10px;
     padding: 16px;
@@ -138,15 +139,15 @@ body {
 }
 
 .btn-jogar:hover {
-    background: #86efac;
-    color: #0a0f0a;
+    background: #86EFAC;
+    color: #0A0F0A;
     box-shadow: 0 0 40px rgba(74, 222, 128, 0.5);
     transform: translateY(-2px);
 }
 
-/* INSTRUÇÕES */
+/*INSTRUÇÕES*/
 .instrucao-item {
-    background: #0f1a0f;
+    background: #0F1A0F;
     border: 1px solid var(--borda);
     border-radius: 8px;
     padding: 8px 12px;
